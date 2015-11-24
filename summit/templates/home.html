@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles compress %}
+
+{% block content %}
+<div class="intro-container">
+  <div class="intro">
+    <img src="{% static 'img/logo.svg' %}">
+    <h1 class="event-name"><span>.pywaw</span><span class="event-name__summit">summit</span></h1>
+    <h2 class="intro__subtitle">Join us at second edition of our conference!</h2><h2 class="intro__date">May 2016 Warsaw</h2>
+
+    <div class="intro-buttons">
+      <div class="registration-button">
+        <a class="registration-button__link not-active">Registration</a>
+        <h3 class="registration-button--warning">No tickets available yet.</h3>
+      </div>
+      <div class="newsletter">
+        <a class="newsletter__button" data-reveal-id="newsletter">Newsletter</a>
+        <h3>Stay tuned!</h3>
+        <div id="newsletter" class="newsletter-modal" data-reveal aria-hidden="true" role="dialog">
+          <h2 class="newsletter-modal__title">Newsletter</h2>
+          <div class="newsletter-modal__content">
+            <p>We will send one or two emails per week with important conference news.</p>
+            <form class="form-inline" method="post" action="//pywaw.us9.list-manage.com/subscribe/post?u=6b2b834e61a714b235d08d1c2&amp;id=c28f4ff36f" target="_blank" novalidate>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_6b2b834e61a714b235d08d1c2_c28f4ff36f" tabindex="-1" value=""></div>
+              <div class="form-group">
+                <input type="email" value="" name="EMAIL" class="form-control" placeholder="Email address">
+              </div>
+              <input type="submit" value="Subscribe" name="subscribe" class="newsletter-modal__subscribe">
+            </form>
+          </div>
+          <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
