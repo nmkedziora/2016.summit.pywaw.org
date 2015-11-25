@@ -204,7 +204,9 @@ a {
   }
 }
 
-
+.container {
+  padding-bottom: 125px;
+}
 
 .intro-container {
   @include grid-row;
