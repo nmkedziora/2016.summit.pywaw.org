@@ -11,22 +11,26 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from django.core.exceptions import ImproperlyConfigured
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+def get_env_var(name, **kwargs):
+    try:
+        return os.environ[name]
+    except KeyError:
+        if 'default' in kwargs:
+            return kwargs['default']
+        raise ImproperlyConfigured('Set the {} environment variable.'.format(name))
+
+
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'eo(&$@gi^(!@%ixl&hw3an%aa%9dqyaxzz7=t%hmp%_!5pg@pq'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+SECRET_KEY = get_env_var('SECRET_KEY', default='secret')
 
 # Application definition
 
@@ -70,18 +74,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'summit.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
