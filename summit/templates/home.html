@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles compress %}
-
 {% block content %}
+
 <div class="intro-container">
   <div class="intro">
     <img src="{% static 'img/logo.svg' %}">
@@ -33,7 +33,178 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
+
+
+<!--About --> 
+<div class="about-container" id="about">
+  <div class="about">
+    <h2 class="about__title">About</h2>
+    <div class="about__first-part">
+      <p class="about__intro">PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.</p>
+      <p>Two days of great talks in English led by mix of local and international speakers. The aim is to provide valuable content in a friendly atmosphere that favours experience sharing and fun - please check out our <a href="{% url 'code-of-conduct' %}">code of conduct</a>.</p>
+    </div>
+
+    <div class="about__second-part">
+      <p>The conference derives from experienced local Python community called PyWaw, which actively organizes monthly meetups for over 3.5 years. There were already more than 45 meetings and over 100 presentations.</p>
+      <p>Willing our community to grow, PyWaw decided to go one step beyond and organize a conference that makes a dent in the Python universe.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Sponsors -->
+<div class="sponsors-container">
+  <div class="sponsors" id="sponsors">
+    <h2 class="sponsors__title">Sponsors</h2>
+
+    <div class="sponsors__text">
+      <p>Would you like to support PyWaw Summit conference and help us making it even more awesome?</p>
+      <p><a href="{{ STATIC_URL }}files/pywaw-sponsorship.pdf" target="_blank">Check our sponsorship offer</a> and contact us at <a href="mailto:sponsors@pywaw.org">sponsors@pywaw.org</a></p>
+      <p>If you have any other idea how you can contribute we are happy to hear about it!</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Organisers -->
+<div class="organisers-container" id="organisers">
+  <div class="organisers">
+    <h2 class="organisers__title">Organisers</h2>
+    <div class="organisers__wrapper">
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/konrad.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/konradhalas" target="_blank" rel="nofollow"><h3>Konrad</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/przemek.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/haxoza" target="_blank" rel="nofollow"><h3>Przemek</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/piotr.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/piotrbetkier" target="_blank" rel="nofollow"><h3>Piotr</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/wojtek.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/erbetowski" target="_blank" rel="nofollow"><h3>Wojtek</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/justyna.png' %}');">
+                <div class="kwadrat">
+                  <h3>Justyna</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row organisers__item--offset">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/szymon.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/jasisz1" target="_blank" rel="nofollow"><h3>Szymon</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/tomek.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/tomasz_ducin" target="_blank" rel="nofollow"><h3>Tomek</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/michal.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/tochomik" target="_blank" rel="nofollow"><h3>Michał</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{% static 'img/organisers/placeholder.png' %}');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/aniawsz" target="_blank" rel="nofollow"><h3>Natalia</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'js/navbar-scroll.js' %}"></script>
 {% endblock %}
